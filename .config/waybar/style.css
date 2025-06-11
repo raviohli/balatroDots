@@ -1,0 +1,503 @@
+/*
+@import "catppuccin/mocha.css";
+*/
+
+/*
+* Catppuccin Mocha palette
+*/
+
+@define-color base #1e1e2e;
+@define-color mantle #181825;
+@define-color crust #11111b;
+
+@define-color text #FFFFFF;
+@define-color subtext0 #a6adc8;
+@define-color subtext1 #bac2de;
+
+@define-color surface0 #a13933;
+@define-color surface1 #45475a;
+@define-color surface2 #585b70;
+@define-color surface3 #394161;
+
+@define-color overlay0 #6c7086;
+@define-color overlay1 #7f849c;
+@define-color overlay2 #9ba3c3;
+
+@define-color blue #0085EE;
+@define-color lavender #b4befe;
+@define-color sapphire #74c7ec;
+@define-color sky #89dceb;
+@define-color teal #94e2d5;
+@define-color green #a6e3a1;
+@define-color yellow #f9e2af;
+@define-color peach #fab387;
+@define-color maroon #eba0ac;
+@define-color red #d90404;
+@define-color mauve #f38ba8;
+@define-color pink #f5c2e7;
+@define-color flamingo #f2cdcd;
+@define-color rosewater #f5e0dc;
+@define-color gray #181818;
+
+/* =============================== */
+/* Universal Styling */
+* {
+  border: none;
+  border-radius: 0;
+  font-family: 'Cozette', 'Pixelify Sans', monospace;
+  font-size:18px;
+  min-height: 0;
+  padding: 0;
+  margin: 0;
+  padding-top: 2px;
+  padding-bottom: 1px;
+}
+
+/* =============================== */
+
+
+/* =============================== */
+/* Bar Styling */
+#waybar {
+  background: transparent;
+  color: #FFFFFF;
+  margin-top: 6px;
+}
+
+/* =============================== */
+
+
+/* =============================== */
+/* Main Modules */
+#custom-launcher,
+#workspaces,
+#window,
+#tray,
+#backlight,
+#clock,
+#battery,
+#pulseaudio,
+#network,
+#mpd,
+#cpu,
+#memory,
+#disk,
+#custom-temperature,
+#custom-music,
+#custom-updates,
+#custom-nordvpn,
+#custom-notifications,
+#custom-power,
+#custom-custom,
+#custom-cycle_wall,
+#custom-clipboard,
+#custom-ss,
+#custom-weather {
+  background-color: rgba(0, 0, 0, 0.85);
+  color: white;
+  border-radius: 16px;
+  padding: 0.5rem 1rem;
+  box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
+  border: 5px solid #FA5651;
+  margin-top: 6px;
+  /*
+    margin-bottom: 10px;
+*/
+  margin-right: 10px;
+}
+
+/* =============================== */
+/* Launcher Module */
+#custom-launcher {
+  color: white;
+  /* border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  padding-left: 8px; */
+  padding-right: 1.20rem;
+  font-weight: bold;
+}
+
+/* =============================== */
+/* Workspaces */
+#workspaces {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+#workspaces * {
+  font-size: 0px;
+}
+
+#workspaces button {
+  background-color: rgba(64, 3, 3, 0.75);
+  color: white;
+  border-radius: 100%;
+  min-height: 14px;
+  min-width: 14px;
+  margin: 5px 8px;
+  padding: 0px;
+  /*transition: all 0.5s cubic-bezier(0.33, 1.0, 0.68, 1.0); easeInOutCubic */
+  transition: all 0.5s cubic-bezier(.55, -0.68, .48, 1.68);
+  box-shadow: rgba(0, 0, 0, 0.0) 2px 2px 5px 2px;
+}
+
+#workspaces button.active {
+  /*color: @surface0;
+    border-radius: 1rem;
+    padding: 0rem 10px;*/
+  background: radial-gradient(circle, #d90404 0%, #0a73ea 100%);
+  background-size: 400% 400%;
+  animation: gradient_f 20s ease-in-out infinite;
+  transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
+}
+
+#workspaces button:hover {
+  background-color: rgba(0, 168, 255, 0.5);
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 30%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient_f {
+  0% {
+    background-position: 0% 200%;
+  }
+
+  50% {
+    background-position: 200% 0%;
+  }
+
+  100% {
+    background-position: 400% 200%;
+  }
+}
+
+@keyframes gradient_f_nh {
+  0% {
+    background-position: 0% 200%;
+  }
+
+  100% {
+    background-position: 200% 200%;
+  }
+}
+
+/* =============================== */
+
+
+/* =============================== */
+/* System Monitoring Modules */
+#cpu,
+#memory,
+#temperature {
+  color: white;
+}
+
+#cpu {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: 0;
+  margin-right: 0px;
+  padding-right: 5px;
+}
+
+#memory {
+  border-radius: 0px;
+  margin-right: 0px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-right: 0;
+  border-left: 0;
+}
+
+#custom-temperature {
+  border-radius: 0px;
+  margin-right: 0px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-right: 0;
+  border-left: 0;
+}
+
+#disk {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.85);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  padding-left: 5px;
+  padding-right: 1rem;
+  border-left: 0;
+}
+
+/* Updates Module */
+#custom-updates {
+  color: white;
+  font-weight: bold;
+}
+
+/* =============================== */
+
+
+/* =============================== */
+/* Clock Module */
+#clock {
+  color: white;
+  font-weight: bold;
+  padding-bottom: 8px;
+  padding-top: 5px;
+}
+
+/* =============================== */
+
+
+#custom-music.low {
+  background: rgb(148, 226, 213);
+  background: linear-gradient(52deg, rgba(148, 226, 213, 1) 0%, rgba(137, 220, 235, 1) 19%, rgba(116, 199, 236, 1) 43%, rgba(137, 180, 250, 1) 56%, rgba(180, 190, 254, 1) 80%, rgba(186, 187, 241, 1) 100%);
+  background-size: 300% 300%;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.377);
+  animation: gradient 15s ease infinite;
+  font-weight: bold;
+  color: #fff;
+}
+
+#custom-music.random {
+  background: rgb(148, 226, 213);
+  background: radial-gradient(circle, rgba(148, 226, 213, 1) 0%, rgba(156, 227, 191, 1) 21%, rgba(249, 226, 175, 1) 34%, rgba(158, 227, 186, 1) 35%, rgba(163, 227, 169, 1) 59%, rgba(148, 226, 213, 1) 74%, rgba(164, 227, 167, 1) 74%, rgba(166, 227, 161, 1) 100%);
+  background-size: 400% 400%;
+  animation: gradient_f 4s ease infinite;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.377);
+  font-weight: bold;
+  color: #fff;
+}
+
+#custom-music.critical {
+  background: rgb(235, 160, 172);
+  background: linear-gradient(52deg, rgba(235, 160, 172, 1) 0%, rgba(243, 139, 168, 1) 30%, rgba(231, 130, 132, 1) 48%, rgba(250, 179, 135, 1) 77%, rgba(249, 226, 175, 1) 100%);
+  background-size: 300% 300%;
+  animation: gradient 15s cubic-bezier(.55, -0.68, .48, 1.68) infinite;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.377);
+  font-weight: bold;
+  color: #fff;
+}
+
+#custom-music.Playing {
+  background: radial-gradient(circle at center, #9a221c 0%, #5BAAE7 100%);
+  background-size: 300% 300%;
+  animation: gradient_f 20s ease-in-out infinite;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.85);
+  font-weight: bold;
+  color: #ffffff;
+}
+#custom-music.Paused {
+  background: rgba(0, 0, 0, 0.85);
+  font-weight: bold;
+  
+}
+#custom-music.Stopped {
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+
+/* =============================== */
+/* Music/PlayerCTL Module */
+#custom-music {
+  color: whitesmoke;
+}
+
+/* =============================== */
+
+
+/* =============================== */
+/* Right block for bordering */
+#right-block {
+  background-color: @red;
+  border: 3px solid #FA5651;
+  border-radius: 16px;
+  padding: 0.5rem 1rem;
+  margin-right: 10px;
+  box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
+}
+
+#right-block > * {
+  border: none;
+  margin-right: 0;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+
+/* =============================== */
+
+
+/* =============================== */
+/* Backlight Module */
+#backlight {
+  color: white;
+  border-radius: 0;
+  margin-right: 0px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/* =============================== */
+
+
+/* =============================== */
+/* Battery Module 
+#battery {
+  color: white;
+  border-radius: 0;
+  margin-right: 0px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#battery.charging {
+  color: white;
+}
+
+#battery.warning:not(.charging) {
+  color: @maroon;
+}
+
+#battery.critical:not(.charging) {
+  color: @red;
+  animation-name: blink;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes blink {
+  to {
+    background: @red;
+    color: @surface1;
+  }
+}
+*/
+/* =============================== */
+
+ Notifications Module 
+#custom-notifications {
+  color: white;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+
+/* =============================== */
+/* Tray Module */
+#tray {
+  color: white;
+  padding-right: 1.25rem;
+  margin-left: 0.75rem;
+}
+
+/* =============================== */
+
+
+/* =============================== */
+/* |       Custom Modules        | */
+/* =============================== */
+#custom-custom {
+  color: white;
+  padding-right: 1.25rem;
+  margin-right: 0px;
+}
+
+/* Screenshot */
+#custom-ss {
+  color: white;
+  padding-right: 1.5rem;
+}
+
+/* Wallpaper */
+#custom-cycle_wall {
+  background: linear-gradient(45deg, rgba(245, 194, 231, 1) 0%, rgba(203, 166, 247, 1) 0%, rgba(243, 139, 168, 1) 13%, rgba(235, 160, 172, 1) 26%, rgba(250, 179, 135, 1) 34%, rgba(249, 226, 175, 1) 49%, rgba(166, 227, 161, 1) 65%, rgba(148, 226, 213, 1) 77%, rgba(137, 220, 235, 1) 82%, rgba(116, 199, 236, 1) 88%, rgba(137, 180, 250, 1) 95%);
+  background-size: 500% 500%;
+  animation: gradient 7s linear infinite;
+}
+
+/* Notifications Module */
+#custom-clipboard {
+  color: white;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-right: 0px;
+  padding-right: 8px;
+}
+
+/* Powermenu Module */
+#custom-power {
+  color: white;
+  /* border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  padding-left: 8px; */
+  padding-right: 1.20rem;
+}
+
+/* =============================== */
+
+
+/* === Border exceptions === */
+
+#network label,
+#pulseaudio label,
+#custom-notifications label {
+  padding: 0;
+  margin: 0;
+}
+
+#network,
+#pulseaudio,
+#custom-notifications {
+  margin: 0;
+  margin-top: 6px;
+  margin-right: 0px;
+  padding-left: 6px;
+  padding-right: 10px;
+  padding-top: 4px;
+  background-color: rgba(0, 0, 0, 0.85);
+  border: none;
+  box-shadow: none;
+  border-top: 5px solid #FA5651;
+  border-bottom: 5px solid #FA5651;
+  border-radius: 0;
+  min-height: 0;
+  font-weight: bold;
+}
+/* Left-most item gets left border and rounding */
+#network {
+  border-left: 5px solid #FA5651;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+}
+
+/* Right-most item gets right border and rounding */
+#custom-notifications {
+  border-right: 5px solid #FA5651;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+/* Middle item has no corner radius or side borders */
+#pulseaudio {
+  border-radius: 0;
+}
+
+
+

@@ -1,0 +1,51 @@
+{
+    "layer": "top",
+    "position": "top",
+    "modules-left": ["hyprland/workspaces", "custom/media"],
+    "modules-center": [],
+    "modules-right": [
+        "cpu", "memory", "temperature", "disk", "battery",
+        "clock", "tray"
+    ],
+
+    "hyprland/workspaces": {
+        "on-click": "activate",
+        "format": "{icon}",
+        "format-icons": ["placeholder", "placeholder", "placeholder", "placeholder", "placeholder"]
+    },
+    
+    "custom/media": {
+        "exec": "~/.config/waybar/scripts/player.sh",
+        "return-type": "json",
+        "interval": 2
+    },
+    
+    "cpu": {
+        "format": "placeholder {usage}%",
+        "tooltip": false
+    },
+
+    "memory": {
+        "format": "placeholder {used:0.1f}GiB/{total:0.1f}GiB",
+        "tooltip": false
+    },
+
+    "temperature": {
+        "format": "placeholder {temperatureC}placeholderC",
+        "tooltip": false
+    },
+
+    "disk": {
+        "format":"{capacity}%",
+        "tooltip": false
+    },
+    
+    "clock": {
+        "format": " {:%d <small>%a</small> %I:%M %p}"
+    },
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 8
+    }
+}

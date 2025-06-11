@@ -1,0 +1,51 @@
+
+@define-color text #187bcd;
+@define-color red #a13933;
+@define-color mauve #a13933;
+@define-color surface0 #a13933;
+
+* {
+  border: none;
+  border-radius: 0;
+  font-family: 'CaskaydiaCove Nerd Font', monospace;
+  font-size: 13px;
+  min-height: 0;
+}
+
+/* Example modules */
+#network,
+#pulseaudio,
+#custom-notifications {
+  margin: 0;
+  padding: 0 10px;
+  background-color: @red;
+  border: none;
+  box-shadow: none;
+  border-top: 3px solid white;
+  border-bottom: 3px solid white;
+  border-radius: 0;
+  min-height: 0;
+  font-size: 12px;
+}
+
+#network {
+  border-left: 3px solid white;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+}
+
+#custom-notifications {
+  border-right: 3px solid white;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+#network *,
+#pulseaudio *,
+#custom-notifications * {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-height: 0;
+  font-size: 12px;
+}
