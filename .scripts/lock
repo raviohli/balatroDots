@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+hyprlock || hyprctl dispatch exit
+# sleep 2; ~/.config/hypr/scripts/screenshot_full

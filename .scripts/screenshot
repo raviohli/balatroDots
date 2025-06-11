@@ -1,0 +1,7 @@
+#!/usr/bin/bash
+filename=~/Pictures/screenshots/$(date +'%H_%M_%S-%Y-%m-%d').png
+grim -g "$(slurp)" "$filename" && wl-copy < "$filename"
+
+#grim -g "$(slurp)" ~/Pictures/screenshots/$(date +'%H_%M_%S-%Y-%m-%d.png') && wl-copy < ~/Pictures/screenshots/$(date +'%H_%M_%S-%Y-%m-%d.png')
+#grim -g "$(slurp)" ~/Pictures/$(date +'%H%M%S-%Y-%m-%d.png') | wl-copy
+#grim -g "$(slurp)" - | tee ~/Pictures/$(date +'%H%M%S-%Y-%m-%d.png') | wl-copy

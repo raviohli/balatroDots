@@ -1,0 +1,132 @@
+* {
+  transition: 0.2s;
+}
+
+window {
+	font-family: "Cozette";
+	font-size: 13px;
+}
+
+window {
+    margin: 0px;
+    border: 2px solid white;
+    background-color: rgba(0, 0, 0, 0.55);
+    border-radius: 16px;
+
+}
+
+#input {
+    padding: 4px;
+    margin: 20px;
+    padding-left: 20px;
+    border: 3px solid white;
+    color: white;
+    font-weight: bold;
+    background-color: rgba(91, 170, 231, 0.55);
+    animation: borderPulse 1.5s infinite ease-in-out;
+    outline: none;
+    border-radius: 16px;
+}
+
+
+#input image {
+    color: #fff;
+}
+
+#input:focus {
+    border: none;
+   	outline: none;
+}
+
+#inner-box {
+    margin: 20px;
+    margin-top: 0px;
+    border: none;
+    color: #0085EE    ;
+    border-radius: 16px;
+}
+
+#inner-box * {
+    transition: none;
+}
+
+#outer-box {
+    margin: 0px;
+    border: none;
+    padding: 0px;
+    border-radius: 16px;
+}
+
+#scroll {
+    margin-top: 5px;
+    border: none;
+    border-radius: 16px;
+    margin-bottom: 5px;
+}
+
+#text:selected {
+    color: #fff;
+    font-weight: bold;
+}
+
+#img {
+    margin-right: 20px;
+    background: transparent;
+}
+
+#text {
+    margin: 0px;
+    border: none;
+    padding: 0px;
+    background: transparent;
+}
+
+#entry {
+    margin: 0px;
+    border: none;
+    border-radius: 16px;
+    background-color: transparent;
+    min-height:32px;
+    font-weight: bold;
+}
+
+#entry:selected {
+    background-image: radial-gradient(circle at center, #9a221c 0%, #5BAAE7 100%);
+    background-size: 300% 300%;
+    outline: none;
+    margin: 0px;
+    border: 2px solid white;
+    border-radius: 16px;
+    animation: wofi_gradient_f 10s ease-in-out infinite;
+}
+
+@keyframes scanlineFlicker {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.90;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes borderPulse {
+    0% {
+      box-shadow: 0 0 2px white;
+    }
+    50% {
+      box-shadow: 0 0 6px white;
+    }
+    100% {
+      box-shadow: 0 0 2px white;
+    }
+    
+  }
+
+  @keyframes wofi_gradient_f {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }

@@ -1,0 +1,26 @@
+#1/bin/bash
+
+# Usage: cutclip -s START -e END -i INPUT -o OUTPUT
+while getopts "s:e:i:o:" opt; do
+    case $opt in
+        s) start="$OPTARG" ;;
+        e) end="$OPTARG" ;;
+        i) input="$OPTARG" ;;
+        o) output="$OPTARG" ;;
+        *) 
+            echo "Usage: cutclip -s START -e END -i INPUT -o OUTPUT NAME, ONLY FILE NAME"
+            echo "OUTPUT STORED IN ~/vIDEOS/CLIPS/TRIMMED/XYZ"
+            exit 1
+            ;;
+    esac
+done
+
+# Check that required options are provided
+if [[ -z "$start" || -z "$end" || -z "$input" || -z "$output" ]]; then
+    echo "Usage: cutclip -s START -e END -i INPUT -o OUTPUT"
+    exit 1
+fi
+
+ffmpeg -i "$input" -ss "$start" -to "$end"  \
+        -c:v h264_nvenc -preset fast -cq 23 \
+        -c:a copy "/home/buddy/Videos/trimmed/$output"
