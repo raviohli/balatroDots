@@ -24,3 +24,7 @@ fc-cache -fv
 
 sudo pacman -S --needed waybar hyprland blueman btop ffmpeg grim slurp gamemode mpv nano fastfetch \
 pavucontrol jq sddm wofi zsh openrgb
+
+# Move things that need to be moved to where they need to be moved
+cp -R .scripts ~/.scripts
+cp -R .config ~/.config
