@@ -23,4 +23,4 @@ fc-cache -fv
 # Install dependencies
 
 sudo pacman -S --needed waybar hyprland blueman btop ffmpeg grim slurp gamemode mpv nano fastfetch \
-pavucontrol jq sddm wofi zsh
+pavucontrol jq sddm wofi zsh openrgb
