@@ -1,12 +1,11 @@
 #/bin/bash
-
 echo "This script assumes a fresh, clean user home while running!\n"
 echo "This script is mainly for my personal use! Tinkering almost certainly will be"
 echo "required after use!\n"
 # Install dependencies & update before doing so
 sudo pacman -Syu
-sudo pacman -S --needed waybar hyprland blueman btop ffmpeg grim slurp gamemode mpv nano fastfetch \
-pavucontrol jq sddm wofi zsh openrgb wget glfw stb glew starship cmake meson cpio pkg-config git gcc \
+sudo pacman -S --needed waybar hyprland blueman btop ffmpeg grim slurp gamemode mpv nano fastfetch vesktop \
+pavucontrol jq sddm wofi zsh openrgb wget glfw stb glew starship cmake meson cpio pkg-config git gcc yazi nemo \
 
 # This will be well commented for your reading pleasure (and mine)
 
@@ -33,8 +32,8 @@ mkdir -p ~/Pictures/screenshots
 
 
 # Move things that need to be moved to where they need to be moved
-mv .scripts ~/.scripts
-mv .config ~/.config
+cp -r .scripts ~/.scripts
+cp -r .config ~/.config
 
 hyprpm update
 hyprpm add https://github.com/hyprwm/hyprland-plugins
