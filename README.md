@@ -20,3 +20,10 @@ aur only:
 yay -S cozette-otb
 ```
 
+### USAGE
+```
+git clone https://github.com/raviohli/balatroDots && cd balatrodots
+./install.sh
+```
+The install.sh will get you somewhat close. Restart hyprland once for the changes to take effect, for the most part.
+
