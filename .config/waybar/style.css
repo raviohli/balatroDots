@@ -49,7 +49,7 @@
   min-height: 0;
   padding: 0;
   margin: 0;
-  padding-top: 2px;
+  padding-top: 1px;
   padding-bottom: 1px;
 }
 
@@ -95,7 +95,7 @@
 #custom-weather {
   background-color: rgba(0, 0, 0, 0.85);
   color: white;
-  border-radius: 16px;
+  border-radius: 12px;
   padding: 0.5rem 1rem;
   box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
   border: 5px solid #FA5651;
@@ -110,10 +110,15 @@
 /* Launcher Module */
 #custom-launcher {
   color: white;
-  /* border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  padding-left: 8px; */
-  padding-right: 1.20rem;
+  background-color: #2d8ede;
+  padding: 0px 16px;
+  border-radius: 12px;
+  font-family: 'Press Start 2P', monospace; /* or 'Pixelify Sans' */
+  font-size: 12px;
+  text-shadow: 0 0 2px black;
+  box-shadow: 0 0 3px #000000aa;
+  letter-spacing: 1px;
+  border: 5px solid #FA5651;
   font-weight: bold;
 }
 
@@ -323,7 +328,7 @@
 #right-block {
   background-color: @red;
   border: 3px solid #FA5651;
-  border-radius: 16px;
+  border-radius: 12px;
   padding: 0.5rem 1rem;
   margin-right: 10px;
   box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
@@ -444,10 +449,15 @@
 /* Powermenu Module */
 #custom-power {
   color: white;
-  /* border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  padding-left: 8px; */
-  padding-right: 1.20rem;
+  background-color: rgba(250, 86, 81,0.98);
+  border-radius: 16px;
+  font-family: 'Press Start 2P', monospace; /* or 'Pixelify Sans' */
+  font-size: 12px;
+  text-shadow: 0 0 2px black;
+  box-shadow: 0 0 3px #000000aa;
+  letter-spacing: 1px;
+  border: 5px solid #FA5651;
+  font-weight: bold;
 }
 
 /* =============================== */

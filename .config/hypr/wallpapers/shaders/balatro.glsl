@@ -21,9 +21,9 @@ uniform sampler2D myTexture; // Texture extracted from a jpeg file
 #define COLOUR_2 vec4(0.0, 0.42, 0.706, 1.0)
 #define COLOUR_3 vec4(0.086, 0.137, 0.145, 1.0)
 #define CONTRAST 3.5
-#define LIGTHING 0.4
+#define LIGTHING 0.40
 #define SPIN_AMOUNT 0.25
-#define PIXEL_FILTER 1920.0
+#define PIXEL_FILTER 500.0
 #define SPIN_EASE 1.0
 #define PI 3.14159265359
 #define IS_ROTATE true

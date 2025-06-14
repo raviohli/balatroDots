@@ -41,7 +41,7 @@ timedatectl &
 hyprpm reload -n &
 ~/.scripts/launch-glwall.sh &
 ~/.scripts/pauseGLWall.sh &
-openrgb -p /home/buddy/.config/OpenRGB/blue.orp
+openrgb -p ~/.config/OpenRGB/blue.orp
 # Applets
 blueman-applet &
 nm-applet --indicator &

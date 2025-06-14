@@ -38,12 +38,8 @@
         // "custom/custom"
     ],
     "custom/launcher": {
-        "format": "{}",
-        "tooltip": true,
-        "exec": "echo 󰣑",
-        "return-type": "plain",
-        //"on-click": "pkill tofi || sleep 0.15 && tofi-drun -c ~/.config/tofi/tofi.launcher.conf",
-        //"on-click-right": "pkill tofi || sleep 0.15 && tofi-run -c ~/.config/tofi/tofi.launcher.conf",
+        "format": "PLAY",
+        "tooltip": false,
         "on-click": "pkill wofi || wofi --show drun -n",
         "on-click-right": "pkill wofi || wofi --show run -n"
     },
@@ -101,7 +97,7 @@
         "format-icons": {
             "Playing": "󰐊 ", // Uncomment if not using the dynamic script
             "Paused": " ",
-            "Stopped": "&#x202d;ﭥ ", // This stop symbol is RTL. So &#x202d; is left-to-right override.
+            "Stopped": "󰣑", 
         },
         "escape": true,
         "tooltip": true,
@@ -111,7 +107,7 @@
         "on-scroll-up": "playerctl previous",
         "on-scroll-down": "playerctl next",
         "on-click-right": "amberol",
-        "max-length": 140
+        "max-length": 50
     },
     "hyprland/window": {
         "format": "{}",
@@ -274,10 +270,8 @@
         "escape": true
     },
     "custom/power": {
-        "format": "{}",
+        "format": "QUIT",
         // "exec": "~/.scripts/tools/expand power",
-        "exec": "echo '{\"text\":\"󰐥\",\"tooltip\":\"Power\"}'",
-        "return-type": "json",
         "on-click": "~/.config/wlogout/launch.sh"
     },
     "custom/custom": {

@@ -1,15 +1,18 @@
 #/bin/bash
 
-# Install dependencies
-
+echo "This script assumes a fresh, clean user home while running!\n"
+echo "This script is mainly for my personal use! Tinkering almost certainly will be"
+echo "required after use!\n"
+# Install dependencies & update before doing so
+sudo pacman -Syu
 sudo pacman -S --needed waybar hyprland blueman btop ffmpeg grim slurp gamemode mpv nano fastfetch \
-pavucontrol jq sddm wofi zsh openrgb wget glfw stb glew
+pavucontrol jq sddm wofi zsh openrgb wget glfw stb glew starship cmake meson cpio pkg-config git gcc \
 
 # This will be well commented for your reading pleasure (and mine)
 
 # Installing fonts
 echo "Installing font - Cozette\n"
-wget https://github.com/the-moonwitch/Cozette/releases/download/v.1.29.0/cozette.bdf 
+yay -S cozette-otb
 echo "Installing font - Gohu Nerd Font\n"
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Gohu.zip
 echo "\n Unzipping font Gohu"
@@ -26,10 +29,16 @@ rm -rf gohuFont
 # Remake font cache
 fc-cache -fv
 
-# Install dependencies
-
+mkdir -p ~/Pictures/screenshots
 
 
 # Move things that need to be moved to where they need to be moved
 mv .scripts ~/.scripts
-cp -R .config ~/.config
+mv .config ~/.config
+
+hyprpm update
+hyprpm add https://github.com/hyprwm/hyprland-plugins
+hyprpm enable hyprwinwrap
+
+
+echo "That should be it. youll have to change the GTK themes yourself. im too lazy."

@@ -1,29 +1,32 @@
 /*
  * vim: ft=less
  */
-
-@define-color noti-bg rgb(22, 25, 37);
+* {
+  font-family: 'Cozette', monospace;
+  font-size: 20px
+}
+@define-color noti-bg #FA5651;
 @define-color cc-bg alpha(@noti-bg, 0.9);
 
 @define-color noti-border-color @noti-bg;
 @define-color noti-bg-hover rgb(39,44,66);
-@define-color noti-close-bg rgba(255, 255, 255, 0.1);
-@define-color noti-close-bg-hover rgba(255, 255, 255, 0.15);
+@define-color noti-close-bg rgba(250, 86, 81, 0.80);
+@define-color noti-close-bg-hover rgba(250, 86, 81, 0.2);
 
-@define-color bg-selected rgb(137,180,250);
+@define-color bg-selected rgba(250, 86, 81, 0.2);
 
 
 /* Window behind control center and on all other monitors */
 .blank-window {
-  background: alpha(black, 0);
+  background: transparent;
 
 }
 
 /* Main panel */
 .control-center {
-  background: @cc-bg;
-  border-radius: 16px;
-  border: 2px solid #cba6f7;
+  background: rgba(0,0,0,0.85);
+  border-radius: 4px;
+  border: 5px solid rgb(250, 86, 81);
 }
 
 .control-center-list {
@@ -52,6 +55,8 @@
 .notification {
   box-shadow: none;
   outline: none;
+  background: transparent;
+  border: none;
   padding: 0;
   margin: 0;
 }
@@ -66,17 +71,18 @@
   margin: 10px;
   padding:8px;
   border-radius: 16px;
-  border: 2px solid #cba6f7;
-  background: @cc-bg;
+  border: 5px solid #FA5651;
+  background: rgba(0,0,0,0.85);
 }
 
 .control-center .notification-content {
   border: none;
   background: transparent;
+  border: 3px solid #FA5651;
 }
 
 .close-button {
-  background: @noti-close-bg;
+  background: transparent;
   color: white;
   text-shadow: none;
   padding: 0;
@@ -91,7 +97,7 @@
 
 .close-button:hover {
   box-shadow: none;
-  background: @noti-close-bg-hover;
+  background: transparent;
   transition: all 0.15s ease-in-out;
   border: none;
 }
@@ -99,6 +105,7 @@
 .control-center .close-button {
   margin-top: 4px;
   margin-right: 4px;
+  background: transparent;
 }
 
 .notification-default-action,
@@ -170,7 +177,7 @@
   color: white;
   text-shadow: none;
   background: @noti-bg;
-  border: 1px solid @noti-border-color;
+  border: 5px solid @noti-border-color;
   box-shadow: none;
   border-radius: 12px;
 }
@@ -187,7 +194,7 @@
   font-size: initial;
   border-radius: 12px;
   background: @noti-bg;
-  border: 1px solid @noti-border-color;
+  border: 5px solid @noti-border-color;
   box-shadow: none;
 }
 .widget-dnd > switch:checked {
