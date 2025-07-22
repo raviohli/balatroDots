@@ -14,7 +14,7 @@
         "custom/launcher",
         "hyprland/workspaces",
         "cpu",
-        "memory",
+        // "memory",
         "custom/temperature",
         "disk",
         "custom/updates"
@@ -40,7 +40,7 @@
     "custom/launcher": {
         "format": "PLAY",
         "tooltip": false,
-        "on-click": "pkill wofi || wofi --show drun -n",
+        "on-click": "pkill wofi || wofi --show drun -n & ~/.scripts/playSound.sh generic",
         "on-click-right": "pkill wofi || wofi --show run -n"
     },
     "hyprland/workspaces": {
@@ -52,9 +52,11 @@
         },
         "on-scroll-up": "hyprctl dispatch workspace e-1",
         "on-scroll-down": "hyprctl dispatch workspace e+1",
-        "on-click": "activate",
+        "on-click": "~/.scripts/workspace-click.sh",
 	"persistent-workspaces": {
-		"*": 6
+		"DP-1": [1, 2, 3, 4, 5, 6],
+        "DP-2": [1, 2, 3, 7, 8, 9],
+        "DP-3": [1, 2, 3, 10, 11, 12]
 	}
     },
     "cpu": {
@@ -103,7 +105,7 @@
         "tooltip": true,
         "exec": "~/.scripts/caway -b 10 -e",
         "return-type": "json",
-        "on-click": "playerctl play-pause",
+        "on-click": "playerctl play-pause; ~/.scripts/playSound.sh generic",
         "on-scroll-up": "playerctl previous",
         "on-scroll-down": "playerctl next",
         "on-click-right": "amberol",
@@ -124,7 +126,8 @@
         "tooltip-format-wifi": "{icon} {essid} ({signalStrength}%)",
         "tooltip-format-ethernet": "{icon} {ipaddr}/{cidr}",
         "tooltip-format-disconnected": "{icon} Disconnected",
-        "on-click-right": "nm-connection-editor",
+        "on-click-right": "~/.scripts/playSound.sh generic; nm-connection-editor",
+        "on-click" : "~/.scripts/playSound.sh card3",
         "format-icons": {
             "ethernet": "",
             "disconnected": "⚠",
@@ -155,7 +158,7 @@
                 ""
             ]
         },
-        "on-click": "pavucontrol"
+        "on-click": "~/.scripts/playSound.sh generic; pavucontrol"
     },
     "backlight": {
         // "device": "acpi_video1",
@@ -232,7 +235,8 @@
         "format-calendar": "<span color='#f2cdcd'><b>{}</b></span>",
         "format-calendar-weeks": "<span color='#94e2d5'><b>W{:%U}</b></span>",
         "format-calendar-weekdays": "<span color='#f9e2af'><b>{}</b></span>",
-        "interval": 60
+        "interval": 60,
+        "on-click": "~/.scripts/playSound.sh card3"
     },
     "idle_inhibitor": {
         "format": "{icon}",
@@ -272,7 +276,7 @@
     "custom/power": {
         "format": "QUIT",
         // "exec": "~/.scripts/tools/expand power",
-        "on-click": "~/.config/wlogout/launch.sh"
+        "on-click": "~/.scripts/playSound.sh generic; ~/.config/wlogout/launch.sh"
     },
     "custom/custom": {
         "format": "{}",

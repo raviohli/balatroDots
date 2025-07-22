@@ -1,0 +1,53 @@
+    OpenRGB v0.9
+    Commit:  from 
+    Launched: 20250513_101019
+====================================================================================================
+
+0     |Info:    Found file: blue.orp attempting to validate header
+0     |Info:    Valid v4 profile found for blue
+1002  |Info:    ------------------------------------------------------
+1002  |Info:    |               Start device detection               |
+1002  |Info:    ------------------------------------------------------
+1002  |Info:    Initializing HID interfaces: Success
+1010  |Info:    ------------------------------------------------------
+1010  |Info:    |             Detecting I2C interfaces               |
+1010  |Info:    ------------------------------------------------------
+1010  |Info:    Registering I2C interface: /dev/i2c-3 Device 10DE:2484 Subsystem: 3842:3767
+1010  |Info:    Registering I2C interface: /dev/i2c-1 Device 1022:790B Subsystem: 1043:87C0
+1010  |Info:    Registering I2C interface: /dev/i2c-8 Device 10DE:2484 Subsystem: 3842:3767
+1010  |Info:    Registering I2C interface: /dev/i2c-6 Device 10DE:2484 Subsystem: 3842:3767
+1010  |Info:    Registering I2C interface: /dev/i2c-4 Device 10DE:2484 Subsystem: 3842:3767
+1011  |Info:    Registering I2C interface: /dev/i2c-2 Device 1022:790B Subsystem: 1043:87C0
+1011  |Info:    Registering I2C interface: /dev/i2c-0 Device 1022:790B Subsystem: 1043:87C0
+1011  |Info:    Registering I2C interface: /dev/i2c-7 Device 10DE:2484 Subsystem: 3842:3767
+1011  |Info:    Registering I2C interface: /dev/i2c-5 Device 10DE:2484 Subsystem: 3842:3767
+1011  |Info:    ------------------------------------------------------
+1011  |Info:    |               Detecting I2C devices                |
+1011  |Info:    ------------------------------------------------------
+1360  |Info:    [ENE DRAM] Registering RGB controller
+1536  |Info:    [ENE DRAM] Registering RGB controller
+2506  |Info:    ------------------------------------------------------
+2506  |Info:    |               Detecting I2C PCI devices            |
+2506  |Info:    ------------------------------------------------------
+2515  |Info:    [EVGA GeForce RTX 3070 FTW3 Ultra] Registering RGB controller
+2515  |Info:    ------------------------------------------------------
+2515  |Info:    |               Detecting HID devices                |
+2515  |Info:    ------------------------------------------------------
+2588  |Info:    [ASUS ROG CROSSHAIR VIII HERO (WI-FI)] Registering RGB controller
+2640  |Info:    [Logitech G915 Wireless RGB Mechanical Gaming Keyboard] Registering RGB controller
+3210  |Info:    [NZXT RGB & Fan Controller] Registering RGB controller
+3210  |Info:    ------------------------------------------------------
+3210  |Info:    |            Detecting libusb HID devices            |
+3210  |Info:    ------------------------------------------------------
+3323  |Info:    ------------------------------------------------------
+3323  |Info:    |              Detecting other devices               |
+3323  |Info:    ------------------------------------------------------
+3336  |Info:    ------------------------------------------------------
+3336  |Info:    |                Detection completed                 |
+3336  |Info:    ------------------------------------------------------
+3336  |Info:    Profile loading: Succeeded for ENE DRAM @ I2C: /dev/i2c-0, address 0x72
+3336  |Info:    Profile loading: Succeeded for ENE DRAM @ I2C: /dev/i2c-0, address 0x73
+3337  |Info:    Profile loading: Succeeded for EVGA GeForce RTX 3070 FTW3 Ultra @ I2C: /dev/i2c-3, address 0x2D
+3337  |Info:    Profile loading: FAILED! for ASUS ROG CROSSHAIR VIII HERO (WI-FI) @ HID: /dev/hidraw8
+3337  |Info:    Profile loading: Succeeded for Logitech G915 Wireless RGB Mechanical Gaming Keyboard @ 
+3337  |Info:    Profile loading: Succeeded for NZXT RGB & Fan Controller @ HID: /dev/hidraw1

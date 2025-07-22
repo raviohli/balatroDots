@@ -3,7 +3,7 @@
 last_state="none"
 
 while true; do
-    if hyprctl clients -j | jq -e 'any(.[]; .fullscreen != 0)' >/dev/null; then
+    if hyprctl clients -j | jq -e 'any(.[]; (.workspace.id == 1 or .workspace.id == 4) and .fullscreen != 0)' >/dev/null; then
         if [[ "$last_state" != "fullscreen" ]]; then
             pkill -SIGUSR1 GLWall
             last_state="fullscreen"

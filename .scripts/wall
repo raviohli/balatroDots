@@ -1,0 +1,14 @@
+#!/usr/bin/bash
+
+#Change wallpaper every 3 hours
+
+while true; do
+    hyprctl hyprpaper preload "~/.config/hypr/wallpapers/spacey.jpg"
+    hyprctl hyprpaper wallpaper ",~/.config/hypr/wallpapers/spacey.jpg"
+    notify-send -a aurora "Wallpaper Changed!"
+    sleep 5400
+    hyprctl hyprpaper preload "~/.config/hypr/wallpapers/1.jpg"
+    hyprctl hyprpaper wallpaper ",~/.config/hypr/wallpapers/1.jpg"
+    notify-send -a aurora "Wallpaper Changed!"
+    sleep 5400
+done

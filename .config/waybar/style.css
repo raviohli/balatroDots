@@ -44,7 +44,7 @@
 * {
   border: none;
   border-radius: 0;
-  font-family: 'Cozette', 'Pixelify Sans', monospace;
+  font-family: 'Cozette', monospace;
   font-size:18px;
   min-height: 0;
   padding: 0;
@@ -80,7 +80,6 @@
 #network,
 #mpd,
 #cpu,
-#memory,
 #disk,
 #custom-temperature,
 #custom-music,
@@ -204,7 +203,6 @@
 /* =============================== */
 /* System Monitoring Modules */
 #cpu,
-#memory,
 #temperature {
   color: white;
 }
@@ -217,14 +215,14 @@
   padding-right: 5px;
 }
 
-#memory {
+/*#memory {
   border-radius: 0px;
   margin-right: 0px;
   padding-left: 5px;
   padding-right: 5px;
   border-right: 0;
   border-left: 0;
-}
+}*/
 
 #custom-temperature {
   border-radius: 0px;

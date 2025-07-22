@@ -36,31 +36,26 @@ $scripts/dynamic &
 mpd &
 g4music &
 timedatectl &
-# wallpaper
-#hyprpaper &
 hyprpm reload -n &
-~/.scripts/launch-glwall.sh &
-~/.scripts/pauseGLWall.sh &
 openrgb -p ~/.config/OpenRGB/blue.orp
 # Applets
 blueman-applet &
 nm-applet --indicator &
 
 # other
-#hyprctl setcursor Sweet-cursors 24
 wl-paste --watch cliphist store &
 notify-send -a aurora "hello $(whoami)" &
-#libinput-gestures-setup start &
 
-# sleep 1
+#SCRIPT CALLING
+~/.scripts/launch-glwall.sh &
+~/.scripts/pauseGLWall.sh & # listener to pause gl wall if something is fullscreen on monitor 1
+~/.scripts/playNotifySounds.sh &
+~/.scripts/window-close-listener.sh &
+~/.scripts/startclips.sh &
+
 mpd-mpris &
-hyprctl dispatch movetoworkspacesilent 2,com.github.neithern.g4music
-#gpu-screen-recorder -w DP-1 -f 30 -a "default_input|default_output" -q medium -ac opus -c mp4 -o $HOME/Videos/clips -r 300 > ~/Videos/logs.txt
 
-#sleep 1
-#sleep 2
 
 /usr/lib/xdg-desktop-portal-hyprland &
 /usr/lib/xdg-desktop-portal &
 sleep 20
-~/.scripts/startclips.sh &
